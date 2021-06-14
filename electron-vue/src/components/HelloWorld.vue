@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style scoped>
-  a {
+  .flex-1 a, .flex-2 a {
     text-decoration: none;
     color: black !important;
   }
