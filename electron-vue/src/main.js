@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueHtml2Canvas from 'vue-html2canvas';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub,  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faLinkedin, faGithub)

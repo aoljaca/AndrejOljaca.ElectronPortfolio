@@ -10,6 +10,7 @@
       </div>
       <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
       <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
+      <a href="../assets/Andrej's Resume.pdf" download></a>
     </div>
 </template>
 <script>
