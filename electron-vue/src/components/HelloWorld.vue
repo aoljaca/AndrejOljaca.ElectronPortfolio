@@ -8,9 +8,15 @@
       <div style="padding: 10px; background: #f5da55">
         <button v-on:click="print">Screenshot</button>
       </div>
-      <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
-      <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
-      <a href="../assets/Andrej's Resume.pdf" download></a>
+      <div class="flex-1">
+        <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
+        <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
+      </div>
+      <div class="flex-2">
+        <a href="../assets/Andrej's Resume.pdf" download>Resume</a>
+        <a href="">Email me</a>
+      </div>
+      
     </div>
 </template>
 <script>
@@ -47,3 +53,26 @@ export default {
   // }
 }
 </script>
+
+<style scoped>
+  a {
+    text-decoration: none;
+    color: black !important;
+  }
+  .flex-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-2 a {
+    background-color: turquoise;
+    margin: 7px;
+  }
+</style>
