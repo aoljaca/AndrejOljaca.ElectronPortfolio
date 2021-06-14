@@ -1,15 +1,15 @@
 <template>
-    <div class="specific">
+    <div class="specific" ref="printMe">
       <vue-qrcode value="Andrej Oljaca" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/burst/" />
       <vue-qrcode value="https://www.coindesk.com/price/cardano" />
       <a class="twitter-timeline" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <div ref="printMe" style="padding: 10px; background: #f5da55">
+      <div style="padding: 10px; background: #f5da55">
         <button v-on:click="print">Screenshot</button>
       </div>
-    <!-- OUTPUT -->
       <img :src="output">
+      <button><a :href="output" download>download</a></button>
     </div>
 </template>
 <script>
@@ -33,6 +33,13 @@ export default {
         type: 'dataURL'
       }
       this.output = await this.$html2canvas(el, options);
+      alert(this.output)
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.download = "html_image.png";
+      link.href = this.output.toDataURL("image/png");
+      link.target = '_blank';
+      link.click();
     }
   },
   // mounted() {
