@@ -8,8 +8,6 @@
       <div style="padding: 10px; background: #f5da55">
         <button v-on:click="print">Screenshot</button>
       </div>
-      <img :src="output">
-      <button><a :href="output" download>download</a></button>
     </div>
 </template>
 <script>
@@ -34,12 +32,10 @@ export default {
       }
       this.output = await this.$html2canvas(el, options);
       alert(this.output)
-      var link = document.createElement("a");
-      document.body.appendChild(link);
-      link.download = "html_image.png";
-      link.href = this.output.toDataURL("image/png");
-      link.target = '_blank';
-      link.click();
+      var a = document.createElement('a');
+      a.href = this.output;
+      a.setAttribute('download',"download");
+      a.click();
     }
   },
   // mounted() {
