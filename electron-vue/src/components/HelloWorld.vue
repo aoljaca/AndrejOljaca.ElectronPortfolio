@@ -1,18 +1,12 @@
 <template>
-  <qrcode-vue :value="value" :size="size" level="H" />
+  <vue-qrcode value="https://www.1stg.me" />
 </template>
 <script>
-  import QrcodeVue from 'qrcode.vue'
+import VueQrcode from 'vue-qrcode'
 
-  export default {
-    data() {
-      return {
-        value: 'https://example.com',
-        size: 300,
-      }
-    },
-    components: {
-      QrcodeVue,
-    },
-  }
+export default {
+  components: {
+    VueQrcode,
+  },
+}
 </script>
