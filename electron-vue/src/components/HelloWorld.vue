@@ -6,7 +6,7 @@
       <vue-qrcode value="https://www.coindesk.com/price/cardano" />
       <a class="twitter-timeline" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <div ref="printMe" style="padding: 10px; background: #f5da55">
-        <h1 style="color: #000; ">Print me!</h1>
+        <button v-on:click="print">Screenshot</button>
       </div>
     <!-- OUTPUT -->
       <img :src="output">
@@ -35,9 +35,9 @@ export default {
       this.output = await this.$html2canvas(el, options);
     }
   },
-  mounted() {
-    this.print()
-    alert("hey")
-  }
+  // mounted() {
+  //   this.print()
+  //   alert("hey")
+  // }
 }
 </script>
