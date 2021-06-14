@@ -8,8 +8,8 @@
       <div style="padding: 10px; background: #f5da55">
         <button v-on:click="print">Screenshot</button>
       </div>
-      <a href="https://www.linkedin.com/in/andrej-oljaca-21a59113b/" class="fa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com/aoljaca" class="fa" target="_blank"><i class="fab fa-github"></i></a>
+      <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
+      <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
     </div>
 </template>
 <script>
