@@ -1,9 +1,16 @@
 const { app, BrowserWindow } = require('electron');
+const { autoUpdater } = require('electron-updater');
 
 const url = require("url");
 const path = require("path");
 
+require('electron-reload')(__dirname, {
+    electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+});
+
 let mainWindow
+
+
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -12,8 +19,8 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true
     }
-  })
-
+  }
+  )
   mainWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, `./dist/index.html`),
