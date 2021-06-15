@@ -23,7 +23,7 @@
       </div>
       <div class="flex-2">
         <a href="./resume.pdf" download="resume.pdf">Resume</a>
-        <a href="">Email me</a>
+        <a href="mailto: andrej_oljaca@outlook.com">Email me</a>
       </div>
       <!-- <img :src="output"> -->
     </div>
@@ -92,11 +92,15 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    flex-wrap: wrap;
   }
   .flex-4 {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+  }
+  .flex-4 a {
+    margin-bottom: 5px;
   }
   .screenshot {
     margin-bottom: 50px;
