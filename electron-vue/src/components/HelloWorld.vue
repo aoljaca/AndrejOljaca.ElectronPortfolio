@@ -18,8 +18,8 @@
           <button v-on:click="print">Screenshot</button>
       </div>
       <div class="flex-1">
-        <a target="_blank" href="https://www.linkedin.com/in/andrej-oljaca-21a59113b/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="24x"/></a>
-        <a href="https://github.com/aoljaca" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" size="24x"/></a>
+        <a target="_blank" href="https://www.linkedin.com/in/andrej-oljaca-21a59113b/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="2x"/></a>
+        <a href="https://github.com/aoljaca" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" size="2x"/></a>
       </div>
       <div class="flex-2">
         <a href="../assets/Andrej's Resume.pdf" download>Resume</a>
