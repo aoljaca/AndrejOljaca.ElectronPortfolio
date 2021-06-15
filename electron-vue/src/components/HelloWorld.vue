@@ -46,7 +46,8 @@ export default {
   },
   methods: {
     async print() {
-      const el = this.$refs.printMe;
+      // const el = this.$refs.printMe;
+      const el = document.body;
       // add option type to get the image version
       // if not provided the promise will return
       // the canvas.
@@ -58,7 +59,6 @@ export default {
       a.href = this.output;
       a.setAttribute('download',"download.jpg");
       a.click();
-
     }
   },
   // mounted() {
