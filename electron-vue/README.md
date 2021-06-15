@@ -9,6 +9,9 @@ Node version: v14.17.0
 
 ## Project setup
 ```
+cd into electron-vue
+and then ->
+
 npm install
 
 ```
