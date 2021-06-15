@@ -6,17 +6,17 @@
 
         </div>
       </div>
-      <div class="flex-3">
+      <!-- <div class="flex-3">
         <img src="../assets/qr-code-tezos.png" alt="">
         <img src="../assets/qr-code-burst.png" alt="">
         <img src="../assets/qr-code-cardano.png" alt="">
         <img src="../assets/qr-code-name.png" alt="">
-      </div>
+      </div> -->
       <!-- <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/burst/" />
       <vue-qrcode value="https://www.coindesk.com/price/cardano" /> -->
       <div class="flex-4">
-        <a class="twitter-timeline" target="_blank" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" target="_blank" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by Ethereum</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <a class="twitter-timeline" target="_blank" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <div style="padding: 10px; background: #f5da55" class="screenshot">
@@ -61,12 +61,12 @@ export default {
 
     }
   },
-  mounted() {
-    let foo = document.createElement('script');
-    foo.setAttribute("src", "./LivePrice.js");
-    this.$refs.holder.appendChild(foo);
-    this.$refs.holder.insertAdjacentElement('afterend', foo);
-  }
+  // mounted() {
+  //   let foo = document.createElement('script');
+  //   foo.setAttribute("src", "./LivePrice.js");
+  //   this.$refs.holder.appendChild(foo);
+  //   this.$refs.holder.insertAdjacentElement('afterend', foo);
+  // }
 
 }
 </script>
