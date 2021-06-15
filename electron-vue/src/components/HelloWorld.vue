@@ -26,6 +26,9 @@
         <a href="mailto: andrej_oljaca@outlook.com">Email me</a>
       </div>
       <!-- <img :src="output"> -->
+      <div ref="hey">
+        
+      </div>
     </div>
 </template>
 <script>
@@ -56,12 +59,19 @@ export default {
 
     }
   },
+  mounted() {
+    let foo = document.createElement('script');    
+    foo.setAttribute("src", "./LivePrice.js");
+    this.$refs.hey.appendChild(foo);
+  }
   // mounted() {
   //   this.print()
   //   alert("hey")
   // }
 }
 </script>
+
+
 
 <style scoped>
   .flex-1 a, .flex-2 a {
@@ -106,3 +116,4 @@ export default {
     margin-bottom: 50px;
   }
 </style>
+
