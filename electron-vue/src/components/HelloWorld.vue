@@ -1,6 +1,9 @@
 <template>
     <div class="specific" ref="printMe">
       <vue-qrcode value="Andrej Oljaca" />
+      <img src="../assets/qr-code-tezos.png" alt="">
+      <img src="../assets/qr-code-burst.png" alt="">
+      <img src="../assets/qr-code-cardano.png" alt="">
       <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/burst/" />
       <vue-qrcode value="https://www.coindesk.com/price/cardano" />
@@ -76,5 +79,9 @@ export default {
   .flex-2 a {
     background-color: turquoise;
     margin: 7px;
+  }
+  img, vue-qrcode {
+    width: 70px;
+    height: 70px;
   }
 </style>
