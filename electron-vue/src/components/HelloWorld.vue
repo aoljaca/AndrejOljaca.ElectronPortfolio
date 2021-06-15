@@ -4,13 +4,15 @@
       <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/burst/" />
       <vue-qrcode value="https://www.coindesk.com/price/cardano" />
-      <a class="twitter-timeline" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" target="_blank" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="twitter-timeline" target="_blank" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <div style="padding: 10px; background: #f5da55">
         <button v-on:click="print">Screenshot</button>
       </div>
       <div class="flex-1">
-        <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
-        <a href=""><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
+        <a target="_blank" href="https://www.linkedin.com/in/andrej-oljaca-21a59113b/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
+        <a href="https://github.com/aoljaca" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
+
       </div>
       <div class="flex-2">
         <a href="../assets/Andrej's Resume.pdf" download>Resume</a>
