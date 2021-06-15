@@ -2,7 +2,9 @@
     <div class="specific" ref="printMe">
       <!-- <vue-qrcode value="Andrej Oljaca" width="70"/> -->
       <div ref="prices">
-        <p>h</p>
+        <div ref="holder">
+
+        </div>
       </div>
       <div class="flex-3">
         <img src="../assets/qr-code-tezos.png" alt="">
@@ -46,7 +48,7 @@ export default {
     async print() {
       const el = this.$refs.printMe;
       // add option type to get the image version
-      // if not provided the promise will return 
+      // if not provided the promise will return
       // the canvas.
       const options = {
         type: 'dataURL'
@@ -60,14 +62,12 @@ export default {
     }
   },
   mounted() {
-    let foo = document.createElement('script');    
+    let foo = document.createElement('script');
     foo.setAttribute("src", "./LivePrice.js");
-    this.$refs.prices.appendChild(foo);
+    this.$refs.holder.appendChild(foo);
+    this.$refs.holder.insertAdjacentElement('afterend', foo);
   }
-  // mounted() {
-  //   this.print()
-  //   alert("hey")
-  // }
+
 }
 </script>
 
@@ -114,6 +114,9 @@ export default {
   }
   .screenshot {
     margin-bottom: 50px;
+  }
+  .prices {
+    margin-bottom: 600px;
   }
 </style>
 
