@@ -1,22 +1,25 @@
 <template>
     <div class="specific" ref="printMe">
       <!-- <vue-qrcode value="Andrej Oljaca" width="70"/> -->
-      <img src="../assets/qr-code-tezos.png" alt="">
-      <img src="../assets/qr-code-burst.png" alt="">
-      <img src="../assets/qr-code-cardano.png" alt="">
-      <img src="../assets/qr-code-name.png" alt="">
+      <div class="flex-3">
+        <img src="../assets/qr-code-tezos.png" alt="">
+        <img src="../assets/qr-code-burst.png" alt="">
+        <img src="../assets/qr-code-cardano.png" alt="">
+        <img src="../assets/qr-code-name.png" alt="">
+      </div>
       <!-- <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/burst/" />
       <vue-qrcode value="https://www.coindesk.com/price/cardano" /> -->
-      <a class="twitter-timeline" target="_blank" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <a class="twitter-timeline" target="_blank" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <div style="padding: 10px; background: #f5da55">
-        <button v-on:click="print">Screenshot</button>
+      <div class="flex-4">
+        <a class="twitter-timeline" target="_blank" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" target="_blank" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div style="padding: 10px; background: #f5da55" class="screenshot">
+          <button v-on:click="print">Screenshot</button>
       </div>
       <div class="flex-1">
-        <a target="_blank" href="https://www.linkedin.com/in/andrej-oljaca-21a59113b/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/></a>
-        <a href="https://github.com/aoljaca" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }"/></a>
-
+        <a target="_blank" href="https://www.linkedin.com/in/andrej-oljaca-21a59113b/"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }" size="24x"/></a>
+        <a href="https://github.com/aoljaca" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" size="24x"/></a>
       </div>
       <div class="flex-2">
         <a href="../assets/Andrej's Resume.pdf" download>Resume</a>
@@ -46,7 +49,6 @@ export default {
         type: 'dataURL'
       }
       this.output = await this.$html2canvas(el, options);
-      alert(this.output)
       var a = document.createElement('a');
       a.href = this.output;
       a.setAttribute('download',"download");
@@ -84,5 +86,18 @@ export default {
   img, .edit {
     width: 70px;
     height: 70px;
+  }
+  .flex-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .flex-4 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .screenshot {
+    margin-bottom: 50px;
   }
 </style>
