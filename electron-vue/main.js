@@ -1,9 +1,8 @@
-const { app, BrowserWindow, shell } = require('electron');
+const { app, BrowserWindow, ipcMain} = require('electron');
 const url = require("url");
 const path = require("path");
 
 let mainWindow
-
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
@@ -25,6 +24,7 @@ function createWindow() {
   })
 }
 console.log(app);
+
 app.on('ready', createWindow)
 
 app.on('window-all-closed', function () {

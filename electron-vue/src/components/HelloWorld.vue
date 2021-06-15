@@ -22,10 +22,10 @@
         <a href="https://github.com/aoljaca" target="_blank"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" size="2x"/></a>
       </div>
       <div class="flex-2">
-        <a href="../assets/Andrej's Resume.pdf" download>Resume</a>
+        <a href="./resume.pdf" download="resume.pdf">Resume</a>
         <a href="">Email me</a>
       </div>
-      
+      <!-- <img :src="output"> -->
     </div>
 </template>
 <script>
@@ -51,8 +51,9 @@ export default {
       this.output = await this.$html2canvas(el, options);
       var a = document.createElement('a');
       a.href = this.output;
-      a.setAttribute('download',"download");
+      a.setAttribute('download',"download.jpg");
       a.click();
+
     }
   },
   // mounted() {
