@@ -1,6 +1,9 @@
 <template>
     <div class="specific" ref="printMe">
       <!-- <vue-qrcode value="Andrej Oljaca" width="70"/> -->
+      <div ref="prices">
+        <p>h</p>
+      </div>
       <div class="flex-3">
         <img src="../assets/qr-code-tezos.png" alt="">
         <img src="../assets/qr-code-burst.png" alt="">
@@ -26,9 +29,6 @@
         <a href="mailto: andrej_oljaca@outlook.com">Email me</a>
       </div>
       <!-- <img :src="output"> -->
-      <div ref="hey">
-        
-      </div>
     </div>
 </template>
 <script>
@@ -62,7 +62,7 @@ export default {
   mounted() {
     let foo = document.createElement('script');    
     foo.setAttribute("src", "./LivePrice.js");
-    this.$refs.hey.appendChild(foo);
+    this.$refs.prices.appendChild(foo);
   }
   // mounted() {
   //   this.print()
