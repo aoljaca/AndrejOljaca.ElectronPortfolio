@@ -1,12 +1,13 @@
 <template>
     <div class="specific" ref="printMe">
-      <vue-qrcode value="Andrej Oljaca" />
+      <!-- <vue-qrcode value="Andrej Oljaca" width="70"/> -->
       <img src="../assets/qr-code-tezos.png" alt="">
       <img src="../assets/qr-code-burst.png" alt="">
       <img src="../assets/qr-code-cardano.png" alt="">
-      <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
+      <img src="../assets/qr-code-name.png" alt="">
+      <!-- <vue-qrcode value="https://coinmarketcap.com/currencies/tezos/" />
       <vue-qrcode value="https://coinmarketcap.com/currencies/burst/" />
-      <vue-qrcode value="https://www.coindesk.com/price/cardano" />
+      <vue-qrcode value="https://www.coindesk.com/price/cardano" /> -->
       <a class="twitter-timeline" target="_blank" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <a class="twitter-timeline" target="_blank" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <div style="padding: 10px; background: #f5da55">
@@ -25,10 +26,10 @@
     </div>
 </template>
 <script>
-import VueQrcode from 'vue-qrcode'
+// import VueQrcode from 'vue-qrcode'
 export default {
   components: {
-    VueQrcode,
+    // VueQrcode,
   },
   data() {
     return {
@@ -80,7 +81,7 @@ export default {
     background-color: turquoise;
     margin: 7px;
   }
-  img, vue-qrcode {
+  img, .edit {
     width: 70px;
     height: 70px;
   }
